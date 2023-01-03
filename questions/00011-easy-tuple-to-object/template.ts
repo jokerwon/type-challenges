@@ -4,8 +4,8 @@ type TupleToObject<T extends readonly (string | number | symbol)[]> = {
 
 const tuple1 = [2, 'bar', Symbol('')]
 
-type Case1 = typeof tuple1 // (string | number | symbol)[]
-type Case2 = TupleToObject<Case1>
+export type Case1 = typeof tuple1 // (string | number | symbol)[]
+export type Case2 = TupleToObject<Case1>
 // {
 //   [x: string]: string;
 //   [x: number]: number;
